@@ -1,0 +1,155 @@
+/* Estilos para el contenedor principal */
+.proyectos-container {
+    
+    display: grid; /* Utilizamos flexbox para colocar las dos columnas en línea */
+    grid-template-columns: repeat(2,1fr) ;
+    justify-content: center; /* Espaciado entre las dos columnas */
+    align-items: flex-start; /* Alineación superior verticalmente */
+    margin: 0 5%; /* Centra el contenedor horizontalmente en la página */
+    max-width: 90%; /* Ancho máximo del contenedor (ajusta según sea necesario) */
+    column-gap: 30px;
+    width: 90%;
+    
+}
+
+/* Estilos para la columna izquierda (proyectos individuales) */
+.columna-izquierda {
+    margin: auto;
+}
+
+/* Estilos para el proyecto individual */
+.proyecto-individual {
+    text-align: center;
+    width: 100%; /* Ancho fijo del proyecto-individual */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Agrega una sombra más suave */
+    margin: 50px auto;/* Ajusta las imágenes sin distorsionar, recortando si es necesario */
+    padding:0px;
+    height: 500px;
+    background-color: white;
+    border-radius: 5%;
+
+}
+.carousel-inner{
+    position: relative;
+    
+}
+
+.title-proyect{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscurecido */
+    opacity: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    align-items: end;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-proyect h3,h5{
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+    display: block;
+    width: 100%;
+}
+
+.carousel-inner:hover .title-proyect{
+    opacity: 1;
+    transition: opacity 2s;
+    
+ }
+ .carousel-inner:hover .title-proyect h3,h5{
+    margin-bottom: 100px;
+    transition: margin-bottom 2s;
+    
+ }
+
+
+
+/* Estilos para las imágenes del carrusel en proyecto-individual */
+.proyecto-individual img {
+    width: 100%; /* Asegura que las imágenes ocupen el 100% del ancho del contenedor */
+    height: 350px; /* Asegura que las imágenes ocupen el 100% del alto del contenedor */
+    min-height: 350px;
+    object-fit: cover; 
+    border-radius: 5% 5% 0% 0%;
+}
+
+
+
+.description-proyect{
+    text-align: center;
+    padding: 5px 15px;
+}
+
+.description-proyect p{
+    text-align: justify;
+    font-size: small;
+}
+
+header {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agrega una sombra más suave */
+    background-color: black; 
+    padding: 10px;
+    position: sticky;
+    z-index: 16;
+    top: 0;
+}
+
+.mobile-menu i{
+    color: #ccc;
+}
+
+body{
+    background-color: #efefef !important; 
+    font-family:'Times New Roman', Times, serif !important;
+
+  }
+
+
+@media (max-width: 767px) {
+  
+  .columna-derecha{
+    display: none;
+  }
+  .proyectos-container {
+    
+    display: grid; /* Utilizamos flexbox para colocar las dos columnas en línea */
+    grid-template-columns: 100%;
+    justify-content: center; /* Espaciado entre las dos columnas */
+    align-items: flex-start; /* Alineación superior verticalmente */
+    max-width: 100%; /* Ancho máximo del contenedor (ajusta según sea necesario) */
+    }
+  }
+  
+  
+  
+  /* Estilos para tabletas */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .columna-derecha{
+        display: none;
+      }
+    .proyectos-container {
+    display: grid; /* Utilizamos flexbox para colocar las dos columnas en línea */
+    grid-template-columns: 1fr 1fr;
+    justify-content: center; /* Espaciado entre las dos columnas */
+    align-items: flex-start; /* Alineación superior verticalmente */
+    max-width: 90%; /* Ancho máximo del contenedor (ajusta según sea necesario) */
+    }
+    
+    .proyecto-individual {
+        height: 550px;
+
+    }
+
+
+  }
+  
+  /* Estilos para pantallas más grandes, como computadoras de escritorio */
+  @media (min-width: 1024px) {
+   
+  }
